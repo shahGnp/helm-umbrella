@@ -1,0 +1,2 @@
+webapp:
+  outText: "-text=This is an prod env"

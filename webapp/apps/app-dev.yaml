@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webapp-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: webapp-dev
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: webapp
+    repoURL: 'https://github.com/shahgnp/helm-umbrella.git'
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values-dev.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
