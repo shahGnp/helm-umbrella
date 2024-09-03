@@ -4,7 +4,3 @@ description: An Umbrella Helm chart for webapp dev, stage, prod
 type: application
 version: 0.1.0
 appVersion: "1.0"
-
-dependencies:
-- name: webapp
-  repository: https://github.com/shahgnp/webapp.git
