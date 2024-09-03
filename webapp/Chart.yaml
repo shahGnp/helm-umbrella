@@ -7,5 +7,4 @@ appVersion: "1.0"
 
 dependencies:
 - name: webapp
-  version: 0.2.0
   repository: https://github.com/shahgnp/webapp.git
